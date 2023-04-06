@@ -1,0 +1,63 @@
+# Create Namespace
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: catalin
+  labels:
+    name: catalin
+---
+
+# Git Repo & Secret
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: state-repo
+  namespace: catalin
+spec:
+  interval: 1m0s
+  url: https://github.com/CatalinStratulat/FluxTestsProject/
+  ref:
+    branch: main
+  secretRef:
+    name: flux-gitrepo-secret
+
+---
+apiVersion: v1
+data:
+  password: Z2hwX0lBaVlmZVlLdW9jWmRsVkYwbnpkOG4xM3E5RlMzajM1U3lYUw==
+  username: Q2F0YWxpblN0cmF0dWxhdA==
+kind: Secret
+metadata:
+  namespace: catalin
+  name: flux-gitrepo-secret
+type: Opaque
+
+---
+# Helm Repo
+
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: customerstagingregistry
+  namespace: catalin
+spec:
+  interval: 1m0s
+  url: https://catalinstratulat.github.io/FluxTestProject/
+---
+# Kustomization
+
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: flux-kz
+  namespace: catalin
+spec:
+  force: true
+  interval: 1m0s
+  path: ./kustomize
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: state-repo
+  targetNamespace: catalin
