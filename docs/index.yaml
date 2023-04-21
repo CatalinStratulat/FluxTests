@@ -2,20 +2,10 @@ apiVersion: v1
 entries:
   server-print:
   - apiVersion: v2
-    appVersion: 0.0.3
-    created: "2023-04-19T09:41:10.576084107+01:00"
-    description: A Helm chart for Kubernetes
-    digest: 222e96b97a81262514c27fa605268f82766d6edf0badab6c50f50a4b69362ae1
-    name: server-print
-    type: application
-    urls:
-    - server-print-0.1.2.tgz
-    version: 0.1.2
-  - apiVersion: v2
     appVersion: 0.0.2
-    created: "2023-04-19T09:41:10.575820719+01:00"
+    created: "2023-04-21T11:05:39.754450923+01:00"
     description: A Helm chart for Kubernetes
-    digest: 5e151943dfe19958a32991ea0bee0ecea1f850cb72db00e0f0f8c032c814dfe4
+    digest: 121763ae99731772404b8331e39addd40e19afc145e19efa6b1681cb5b820510
     name: server-print
     type: application
     urls:
@@ -23,12 +13,12 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-19T09:41:10.575377299+01:00"
+    created: "2023-04-21T11:05:39.753730584+01:00"
     description: A Helm chart for Kubernetes
-    digest: 3006285429778b27c8505d02f076005a1cf14b189245f25e93ca5fe1c6f36a22
+    digest: 32f9cb22bf977c2a0b20f5e0a3c547aeb6840c6e6254f64c93c7c7440337daf7
     name: server-print
     type: application
     urls:
     - server-print-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-19T09:41:10.57481403+01:00"
+generated: "2023-04-21T11:05:39.752792573+01:00"
