@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: docker.io/catalinstratulat/catalin-flux-app
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v0.0.3"
 
