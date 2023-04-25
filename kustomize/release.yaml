@@ -5,6 +5,9 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
+  upgrade:
+    remediation:
+      retries: 2
   chart:
     spec:
       chart: server-print
