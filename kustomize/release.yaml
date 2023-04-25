@@ -9,6 +9,9 @@ spec:
     spec:
       chart: server-print
       version: '0.1.0'
+      upgrade:
+        remediation:
+          retries: 2
       sourceRef:
         kind: HelmRepository
         name: flux-test-project-helm-registry
