@@ -27,7 +27,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
 def update_item(item_id: int, item: Item):
     return {"item_name": item.name, "item_id": item_id}
 
+dfsdfsdfsdfsf
+
 if __name__ == '__main__':
     uvicorn.run(app, host='0.0.0.0', port=8080)
-
-    dfsdfsdfsdfsf
